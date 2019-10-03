@@ -20,4 +20,16 @@ public class Funcionario {
 	void trabalha() {
 		System.out.println("Funcionário que trabalha.");
 	}
+	
+	Funcionario(int numero, String nome){
+		//System.out.println("Construtor Funcionário");
+		this.numero = numero;
+		this.nome = nome;
+	}
+	
+	Funcionario(){}
+	
+	public int getBonificacao() {
+		return 10;
+	}
 }

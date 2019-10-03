@@ -2,7 +2,7 @@
 public class ContaBancaria {
 	
 	private String titular;
-	private double saldo;
+	protected double saldo;
 	private int numero;
 	
 	public double getSaldo() {
@@ -31,5 +31,9 @@ public class ContaBancaria {
 	
 	public void setNumeroConta(int numeroConta) {
 		this.numero = numeroConta;
+	}
+	
+	public String getTipo() {
+		return "Conta";
 	}
 }

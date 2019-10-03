@@ -11,6 +11,8 @@ public class TestaPessoa {
 		System.out.println(p1.getNome());
 
 		System.out.println(p2.getIdentificador());
+		
+		System.out.println(Pessoa.identificador);
 
 	}
 }

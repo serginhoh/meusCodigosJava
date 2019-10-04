@@ -32,7 +32,7 @@ public class TesteConta {
 		cp.setTitular("Titular Poupança");
 		cp.deposita(100);
 		System.out.println(cp.getSaldo());
-		cp.saque(90);
+		cp.saque(10);
 		System.out.println(cp.getSaldo());
 		System.out.println(cp.getTitular());
 		System.out.println(cp.getTipo());
@@ -44,7 +44,7 @@ public class TesteConta {
 		cc.setTitular("Titular Corrente");
 		cc.deposita(100);
 		System.out.println(cc.getSaldo());
-		cc.saque(90);
+		cc.saque(10);
 		System.out.println(cc.getSaldo());
 		System.out.println(cc.getTitular());
 		System.out.println(cc.getTipo());

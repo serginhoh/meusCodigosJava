@@ -1,5 +1,5 @@
 
-public class ContaBancaria {
+public abstract class ContaBancaria {
 	
 	private String titular;
 	protected double saldo;
@@ -33,7 +33,9 @@ public class ContaBancaria {
 		this.numero = numeroConta;
 	}
 	
-	public String getTipo() {
-		return "Conta";
-	}
+//	public String getTipo() {
+//		return "Conta";
+//	}
+	
+	public abstract String getTipo();
 }

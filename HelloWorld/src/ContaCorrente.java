@@ -6,8 +6,12 @@ public class ContaCorrente extends ContaBancaria{
 		saldo -= (valor + 0.10);
 	}
 	
-	@Override
+//	@Override
+//	public String getTipo() {
+//		return super.getTipo() +  "Corrente";
+//	}
+	
 	public String getTipo() {
-		return super.getTipo() +  "Corrente";
+		return "Conta Corrente";
 	}
 }

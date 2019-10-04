@@ -8,6 +8,6 @@ public class ContaCorrente extends ContaBancaria{
 	
 	@Override
 	public String getTipo() {
-		return "Corrente";
+		return super.getTipo() +  " Corrente";
 	}
 }

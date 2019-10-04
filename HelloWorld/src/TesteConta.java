@@ -37,6 +37,9 @@ public class TesteConta {
 		System.out.println(cp.getTitular());
 		System.out.println(cp.getTipo());
 		
+		System.out.println("");
+		System.out.println("");
+		
 		ContaCorrente cc = new ContaCorrente();
 		cc.setTitular("Titular Corrente");
 		cc.deposita(100);

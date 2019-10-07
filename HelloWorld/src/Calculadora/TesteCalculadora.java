@@ -1,4 +1,4 @@
-1package Calculadora;
+package Calculadora;
 
 import javax.swing.JOptionPane;
 

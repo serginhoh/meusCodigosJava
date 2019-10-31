@@ -20,7 +20,7 @@ public class TesteFuncionario {
 //		arrayFunc[1].trabalha();
 //		arrayFunc[2].trabalha();
 		
-		System.out.println("Autentica : " + ((Autenticavel)arrayFunc[3]).autentica("222"));
+		System.out.println("Autentica : " + ((Autenticavel)arrayFunc[3]).autentica("123"));
 		
 		ControleBonificacao cb = new ControleBonificacao();
 		cb.registra(f1);

@@ -1,5 +1,7 @@
 package TesteErros;
 
+import java.time.LocalDate;
+
 import javax.swing.JOptionPane;
 
 public class TesteErros {
@@ -13,20 +15,20 @@ public class TesteErros {
 		}
 		System.out.println("Fim main");
 	}
-	
+
 	static void metodo1() {
 		System.out.println("Início metodo1");
 		metodo2();
 		System.out.println("Fim metodo1");
 	}
-	
+
 	static void metodo2() {
 		System.out.println("Início metodo2");
-		
-			ContaCorrente cc = new ContaCorrente();
-			
-			metodo3(cc);
-			/*
+
+		ContaCorrente cc = new ContaCorrente("Cliente 1", "Rua A", "123", LocalDate.of(2019, 10, 31));
+
+		metodo3(cc);
+		/*
 			for (int i = 0; i <= 15; i++) {
 				cc.deposita(i + 1000);
 				System.out.println(cc.getSaldo());
@@ -35,15 +37,19 @@ public class TesteErros {
 				}
 			}
 		System.out.println("Fim metodo2");
-		*/
+		 */
 	}
-	
+
 	static void metodo3(ContaCorrente cc) {
 		double valueDeposita = Double.valueOf(JOptionPane.showInputDialog("Valor depósito: "));
 		cc.deposita(valueDeposita);
 		System.out.println("Valor final: ");
 		System.out.println(cc.getSaldo());
-		
+
+		ContaCorrente c2 = new ContaCorrente("Cliente 2", "Rua B", "456", LocalDate.of(2010, 11, 24));
+		boolean cpf = cc.equals(c2);
+		System.out.println("Cpf é igual: " + cpf);
+
 		double valueSaca = Double.valueOf(JOptionPane.showInputDialog("Valor saque: "));
 		try {
 			cc.saca(valueSaca);
@@ -52,5 +58,6 @@ public class TesteErros {
 			e.printStackTrace();
 		}
 		System.out.println("Valor final 2: " + cc.getSaldo());
+		System.out.println("Data nascimento: " + cc.getDataNascimento());
 	}
 }

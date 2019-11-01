@@ -1,5 +1,7 @@
 package TesteErros;
 
+import javax.swing.JOptionPane;
+
 public class TesteErros {
 
 	public static void main (String[] args) {
@@ -22,6 +24,9 @@ public class TesteErros {
 		System.out.println("Início metodo2");
 		
 			ContaCorrente cc = new ContaCorrente();
+			
+			metodo3(cc);
+			/*
 			for (int i = 0; i <= 15; i++) {
 				cc.deposita(i + 1000);
 				System.out.println(cc.getSaldo());
@@ -29,37 +34,23 @@ public class TesteErros {
 					cc = null;
 				}
 			}
-	
-		
-		/*
-		try {
-			ContaCorrente cc = new ContaCorrente();
-			for (int i = 0; i <= 15; i++) {
-				cc.deposita(i + 1000);
-				System.out.println(cc.getSaldo());
-				if (i ==5) {
-					cc = null;
-				}
-			}
-		} catch (NullPointerException e) {
-			System.out.println("Erro: " + e);
-		}
-		*/
-		/*
-			ContaCorrente cc = new ContaCorrente();
-			for (int i = 0; i <= 15; i++) {
-				try {
-					cc.deposita(i + 1000);
-					System.out.println(cc.getSaldo());
-					if (i ==5) {
-						cc = null;
-					}
-				} catch (NullPointerException e) {
-					System.out.println("Erro: " + e);
-				}
-			}
-		 */
-		
 		System.out.println("Fim metodo2");
+		*/
+	}
+	
+	static void metodo3(ContaCorrente cc) {
+		double valueDeposita = Double.valueOf(JOptionPane.showInputDialog("Valor depósito: "));
+		cc.deposita(valueDeposita);
+		System.out.println("Valor final: ");
+		System.out.println(cc.getSaldo());
+		
+		double valueSaca = Double.valueOf(JOptionPane.showInputDialog("Valor saque: "));
+		try {
+			cc.saca(valueSaca);
+		} catch (SaldoInsuficiente e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		System.out.println("Valor final 2: " + cc.getSaldo());
 	}
 }
